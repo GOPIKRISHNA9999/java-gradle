@@ -8,6 +8,7 @@ pipeline{
                 }
             }
             steps{
+                sh 'chmod +x gradlew'
                sh './gradlew sonarqube \
                 -Dsonar.projectKey=CICD_Java_gradle_application \
                 -Dsonar.host.url=http://65.0.20.125:9000 \
